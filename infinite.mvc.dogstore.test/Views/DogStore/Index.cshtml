@@ -1,0 +1,36 @@
+﻿@model List<infinite.mvc.dogstore.test.Models.DogStore>
+   
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2>Dog Store</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <table class="table table-c table-hover">
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th> Pet Name</th>
+                <th>Action</th>
+               
+            </tr>
+            @foreach(var c in Model)
+            {
+        <tr>
+            <td>@c.Id</td>
+
+            <td>@Html.ActionLink(c.PetName, "Details", "DogStore", new { id = c.Id }, new { @class = "" })</td>
+    
+            <td>@Html.ActionLink("Edit", "Edit", "DogStore", new { id = c.Id }, new { @class = "btn btn-primary" })</td>
+
+
+        </tr>
+            }
+        </table>
+    </div>
+</div>
+

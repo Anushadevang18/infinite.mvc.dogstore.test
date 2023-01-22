@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="themeSlider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#themeSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#themeSlider" data-slide-to="1"></li>
+        <li data-target="#themeSlider" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="imgOverlay"></div>
+            <img style="height:400px; width:100%" src="../Images/Papillon-e1534277332557.jpg" alt="First slide">
+            <div class="carousel-caption">
+                <h3>Papillon</h3>
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="imgOverlay"></div>
+            <img style="height:400px; width:100%" src="../Images/papijack.jpg" alt="Second slide">
+            <div class="carousel-caption">
+                <h3>PapiJack</h3>
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="imgOverlay"></div>
+            <img style="height:400px; width:100%" src="../Images/sad-dog-1.jpg" alt="Third slide">
+            <div class="carousel-caption">
+                <h3>Husky</h3>
+
+            </div>
+        </div>
+    </div>
+
+    <a class="left carousel-control" href="#themeSlider" data-slide="prev">
+        <span class="fa fa-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#themeSlider" data-slide="next">
+        <span class="fa fa-chevron-right"></span>
+    </a>
+</div>
+
+<div class="olContent f1"><h2 style="color: black">Search Product/Category</h2></div>
+<form method="post">
+    <div class="olSearch fr">
+        <input type="text" name="search" placeholder="Enter Keyword" class="inputComn form-control" />
+        <div class="searchIcon">
+            <button type="submit" class="searchBtn">
+                <img src="../Images/searchIcon.png" />
+            </button>
+        </div>
+    </div>
+</form>
+<div class="row">
+    <div class=" col-md-12">
+        <div class="page-header">
+            <h2>Our Products <small>Trends Page</small></h2>
+        </div>
+    </div>
+</div>
