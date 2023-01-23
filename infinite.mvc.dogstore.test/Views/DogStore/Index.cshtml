@@ -1,35 +1,58 @@
 ﻿@model List<infinite.mvc.dogstore.test.Models.DogStore>
-   
+
 @{
     ViewBag.Title = "Index";
 
 }
+@section head {
+    <style type="text/css">
+        body {
+            /*background-image: url('../../images3/dog-4988985__340.jpg');*/
+            background-image: url('../../images3/Cute_dog.jpg');
+            background-size:100%;
+/**/            margin: 0;
+        }
+    </style>
+}
 
-<h2>Dog Store</h2>
+<h2 style="color:white; font-family:Georgia, 'Times New Roman', Times, serif; font-style:italic">Dog Store</h2>
+<br />
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <table class="table table-c table-hover">
             <tr>
-                <th>
+                <th style="color:white;">
                     Id
                 </th>
-                <th> Pet Name</th>
-                <th>Action</th>
-               
+                <th style="color:white;"> Pet Name</th>
+                <th style="color:white;">Action</th>
+                <th style="color:white;">Delete</th>
+              
             </tr>
-            @foreach(var c in Model)
+            <br />
+            
+       
+            @foreach (var c in Model)
             {
-        <tr>
-            <td>@c.Id</td>
+                <tr>
+                    <td>@c.Id</td>
 
-            <td>@Html.ActionLink(c.PetName, "Details", "DogStore", new { id = c.Id }, new { @class = "" })</td>
-    
-            <td>@Html.ActionLink("Edit", "Edit", "DogStore", new { id = c.Id }, new { @class = "btn btn-primary" })</td>
+                    <td>@Html.ActionLink(c.PetName, "Details", "DogStore", new { id = c.Id }, new { @class = "" })</td>
 
+                    <td>@Html.ActionLink("Edit", "Edit", "DogStore", new { id = c.Id }, new { @class = "btn btn-primary" })</td>
 
-        </tr>
-            }
+                    <td>
+                        @using (Html.BeginForm("Delete", "DogStore", new { id = c.Id }, FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        }
+                </td>
+                   
+            </tr>
+           
+        }
         </table>
     </div>
 </div>

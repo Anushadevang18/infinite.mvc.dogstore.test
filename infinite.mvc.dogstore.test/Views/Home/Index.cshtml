@@ -8,57 +8,74 @@
         <li data-target="#themeSlider" data-slide-to="1"></li>
         <li data-target="#themeSlider" data-slide-to="2"></li>
     </ol>
+    @section head {
+        <style type="text/css">
+            body {
+                /*  background-image: url('../../images3/dog-4988985__340.jpg');*/
+                                background-image: url('../../images3/360_F_96403995_pGBlcwUQj64A4W8IgsOXALTyb3DAhdGM.jpg');
+/**/
+/*                background-image: url('../../images3/WhatsApp Image 2023-01-23 at 2.05.20 PM.jpeg');
+*/                resize: horizontal;
+                margin: 0;
+            }
+        </style>
+    }
 
-    <div class="carousel-inner">
-        <div class="item active">
+    <div class="text-center">
+        <h2 style="color:white; font-family:Georgia, 'Times New Roman', Times, serif; font-style:italic" class="mt-5" >Welcome to Dog Stores</h2>
+        <div class="text-md-center">
+            @Html.ActionLink("Click here to Dog Stores", "Index", "DogStore", null, new { @class = "btn btn-primary" })
+        </div>
+        <br />
+        @*<div class="carousel-inner">
             <div class="imgOverlay"></div>
-            <img style="height:400px; width:100%" src="../Images/Papillon-e1534277332557.jpg" alt="First slide">
+            <img style="height:430px; width:100%" src="~/images3/MicrosoftTeams-image (1) - Copy.png" alt="First slide">
             <div class="carousel-caption">
-                <h3>Papillon</h3>
+                <h4>Papillon</h4>
 
             </div>
-        </div>
-        <div class="item">
-            <div class="imgOverlay"></div>
-            <img style="height:400px; width:100%" src="../Images/papijack.jpg" alt="Second slide">
-            <div class="carousel-caption">
-                <h3>PapiJack</h3>
+        </div>*@
+        @*<div class="item">
+                        <div class="imgOverlay"></div>
+                        <img style="height:400px; width:100%" src="~/images3/MicrosoftTeams-image (1).png" alt="Second slide">
+                        <div class="carousel-caption">
+                            <h3>PapiJack</h3>
 
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="imgOverlay"></div>
+                        <img style="height:400px; width:100%" src="~/images3/MicrosoftTeams-image (2).png" alt="Third slide">
+                        <div class="carousel-caption">
+                            <h3>Husky</h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                <a class="left carousel-control" href="#themeSlider" data-slide="prev">
+                    <span class="fa fa-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#themeSlider" data-slide="next">
+                    <span class="fa fa-chevron-right"></span>
+                </a>
             </div>
-        </div>
-        <div class="item">
-            <div class="imgOverlay"></div>
-            <img style="height:400px; width:100%" src="../Images/sad-dog-1.jpg" alt="Third slide">
-            <div class="carousel-caption">
-                <h3>Husky</h3>
 
-            </div>
-        </div>
-    </div>
-
-    <a class="left carousel-control" href="#themeSlider" data-slide="prev">
-        <span class="fa fa-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#themeSlider" data-slide="next">
-        <span class="fa fa-chevron-right"></span>
-    </a>
-</div>
-
-<div class="olContent f1"><h2 style="color: black">Search Product/Category</h2></div>
-<form method="post">
-    <div class="olSearch fr">
-        <input type="text" name="search" placeholder="Enter Keyword" class="inputComn form-control" />
-        <div class="searchIcon">
-            <button type="submit" class="searchBtn">
-                <img src="../Images/searchIcon.png" />
-            </button>
-        </div>
-    </div>
-</form>
-<div class="row">
-    <div class=" col-md-12">
-        <div class="page-header">
-            <h2>Our Products <small>Trends Page</small></h2>
-        </div>
+            <div class="olContent f1"><h2 style="color: black">Search Product/Category</h2></div>
+            <form method="post">
+                <div class="olSearch fr">
+                    <input type="text" name="search" placeholder="Enter Keyword" class="inputComn form-control" />
+                    <div class="searchIcon">
+                        <button type="submit" class="searchBtn">
+                            <img src="../Images/searchIcon.png" />
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class=" col-md-12">
+                    <div class="page-header">
+                        <h2>Our Products <small>Trends Page</small></h2>
+                    </div>*@
     </div>
 </div>

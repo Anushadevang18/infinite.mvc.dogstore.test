@@ -3,15 +3,25 @@
 @{
     ViewBag.Title = "Details";
 }
+@section head {
+     <style type="text/css">
+         body {
+             background-image: url('../../images3/MicrosoftTeams-image.png');
+             background-size:130%
+             margin: 0;
+         }
+    </style>
+    }
 
-<h2>Details of Pets</h2>
+    <h3 style="color:black; font-family:Georgia, 'Times New Roman', Times, serif; font-style:italic">Details of Pet</h3>
+
 <div class="row">
     <div class="col-md-3">
         <ul class="list-group">
             <li class="list-group-item"><b> Id :</b>@Model.Id</li>
             <li class="list-group-item"><b>Pet Name :</b>@Model.PetName</li>
             <li class="list-group-item"><b>Description :</b>@Model.Description</li>
-            <li class="list-group-item"><b>Breed :</b>@Model.BreedId</li>
+            <li class="list-group-item"><b>Breed :</b>@Model.Breed.BreedName</li>
             <li class="list-group-item"><b>Height :</b>@Model.Height</li>
             <li class="list-group-item"><b>Weight :</b>@Model.Weight</li>
             <li class="list-group-item"><b>Age :</b>@Model.Age</li>
@@ -20,7 +30,11 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-3">
-        @Html.ActionLink("Back to Index", "Index", "DogStore")
+    <div style="color:black" class="col-md-3">
+        <br />
+            <td>@Html.ActionLink("Go Back", "Index", "DogStore", new { @class = "btn btn-primary" })</td>
+      
+
+
     </div>
 </div>

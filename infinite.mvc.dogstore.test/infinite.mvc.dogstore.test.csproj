@@ -132,9 +132,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202301211805543_DogstoreandBreedName.cs" />
-    <Compile Include="Migrations\202301211805543_DogstoreandBreedName.designer.cs">
-      <DependentUpon>202301211805543_DogstoreandBreedName.cs</DependentUpon>
+    <Compile Include="Migrations\202301221647086_dogstoreandBreed.cs" />
+    <Compile Include="Migrations\202301221647086_dogstoreandBreed.designer.cs">
+      <DependentUpon>202301221647086_dogstoreandBreed.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -159,18 +159,34 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\bootstrap_12.css" />
     <Content Include="Content\bootstrap_journal.css" />
+    <Content Include="Content\bootstrap_lux.css" />
     <Content Include="Content\bootstrap_minty.css" />
+    <Content Include="Content\bootstrap_Sketch.css" />
     <Content Include="Content\bootstrap_superhero.css" />
+    <Content Include="Content\images\MicrosoftTeams-image %282%29.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images3\360_F_96403995_pGBlcwUQj64A4W8IgsOXALTyb3DAhdGM.jpg" />
+    <Content Include="images3\Cute_dog.jpg" />
+    <Content Include="images3\dog-4988985__340.jpg" />
+    <Content Include="images3\Dog_Breeds.jpg" />
+    <Content Include="images3\golden-retriever-dog-21668976.jpg" />
+    <Content Include="images3\MicrosoftTeams-image %281%29 - Copy.png" />
+    <Content Include="images3\MicrosoftTeams-image %281%29.png" />
+    <Content Include="images3\MicrosoftTeams-image %282%29.png" />
+    <Content Include="images3\MicrosoftTeams-image.png" />
+    <Content Include="images3\WhatsApp Image 2023-01-23 at 2.05.20 PM.jpeg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\images\Siberian-Husky_FeaturedImage-1024x615.webp" />
+    <Content Include="images3\Siberian-Husky_FeaturedImage-1024x615.webp" />
     <None Include="Scripts\jquery-3.6.3.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.3.js" />
     <Content Include="Scripts\jquery-3.6.3.min.js" />
@@ -231,8 +247,8 @@
     <Content Include="Scripts\jquery-3.6.3.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202301211805543_DogstoreandBreedName.resx">
-      <DependentUpon>202301211805543_DogstoreandBreedName.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202301221647086_dogstoreandBreed.resx">
+      <DependentUpon>202301221647086_dogstoreandBreed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

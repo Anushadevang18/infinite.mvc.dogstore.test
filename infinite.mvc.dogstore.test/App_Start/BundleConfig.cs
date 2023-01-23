@@ -23,7 +23,7 @@ namespace infinite.mvc.dogstore.test
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap_superhero.css",
+                      "~/Content/bootstrap_12.css",
                       "~/Content/site.css"));
         }
     }

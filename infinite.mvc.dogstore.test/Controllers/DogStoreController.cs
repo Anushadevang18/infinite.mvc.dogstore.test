@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using infinite.mvc.dogstore.test.Models;
+using System.Data.Entity;
 
 namespace infinite.mvc.dogstore.test.Controllers
 {
@@ -27,7 +28,7 @@ namespace infinite.mvc.dogstore.test.Controllers
         }
         public ActionResult Details(int id)
         {
-            var dogstore = _context.DogStores.FirstOrDefault(d => d.Id == id);
+            var dogstore = _context.DogStores.Include(d=>d.Breed).FirstOrDefault(d => d.Id == id);
             if (dogstore != null)
             {
                 return View(dogstore);
@@ -35,7 +36,6 @@ namespace infinite.mvc.dogstore.test.Controllers
             return HttpNotFound();
 
         }
-
 
         public ActionResult Edit(int id)
         {
@@ -49,7 +49,8 @@ namespace infinite.mvc.dogstore.test.Controllers
             return HttpNotFound("Breed Id doesn't exists");
         }
         [HttpPost]
-       
+        [ValidateAntiForgeryToken]
+
         public ActionResult Edit(DogStore dogstore)
         {
             if (dogstore != null)
@@ -70,8 +71,23 @@ namespace infinite.mvc.dogstore.test.Controllers
             ViewBag.Breeds = breeds;
             return View(dogstore);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
+        {
+            var dogstoreInDb = _context.DogStores.FirstOrDefault(d => d.Id == id);
+            if (dogstoreInDb != null)
+            {
+                _context.DogStores.Remove(dogstoreInDb);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
+
+        }
     }
 }
+
 
 
                 

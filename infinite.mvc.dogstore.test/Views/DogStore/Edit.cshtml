@@ -1,47 +1,57 @@
 ﻿@model infinite.mvc.dogstore.test.Models.DogStore
 
 @{ ViewBag.Title = "Edit"; }
+@section head {
+    <style type="text/css">
+        body {
+            background-image: url('../../images3/golden-retriever-dog-21668976.jpg');
+            margin: 0;
+        }
+    </style>
+}
 
-<h2>Edit Pet Details</h2>
+<h2 style="color:black; font-family:Georgia, 'Times New Roman', Times, serif;font-style:italic">Edit Pet Details</h2>
 
 @using (Html.BeginForm())
 {
 @Html.AntiForgeryToken()
 
-  <div class="mb-2">
-  @Html.LabelFor(d => d.PetName, new { @class = "form-label" })
-  @Html.TextBoxFor(d => d.PetName, new { @class = "form-control", @disabled = "disabled" })
- @Html.ValidationMessageFor(d => d.PetName)
- </div>
-  <div class="mb-2">
-   @Html.LabelFor(d => d.Description, new { @class = "form-label" })
-  @Html.TextBoxFor(d => d.Description, new { @class = "form-control" })
-  @Html.ValidationMessageFor(d => d.Description)
-  </div>
-   <div class="mb-2">
-   @Html.LabelFor(d => d.Height, new { @class = "form-label" })
-  @Html.TextBoxFor(d => d.Height, new { @class = "form-control" })
-  @Html.ValidationMessageFor(d => d.Height)
-  </div>
- 
+                <div class="mb-2" style="color:black">
+                    @Html.LabelFor(d => d.PetName, new { @class = "form-label" })
+                    @Html.TextBoxFor(d => d.PetName, new { @class = "form-control", @disabled = "disabled" })
+                    @Html.ValidationMessageFor(d => d.PetName)
+                </div>
+                                <div class="mb-2" style="color:black">
+                                    @Html.LabelFor(d => d.Description, new { @class = "form-label" })
+                                    @Html.TextBoxFor(d => d.Description, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(d => d.Description)
+                                </div>
+                                                <div class="mb-2" style="color:black">
+                                                    @Html.LabelFor(d => d.Height, new { @class = "form-label" })
+                                                    @Html.TextBoxFor(d => d.Height, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(d => d.Height)
+                                                </div>
 
-  <div class="mb-2">
- @Html.LabelFor(d => d.Weight, new { @class = "form-label" })
- @Html.TextBoxFor(d => d.Weight, new { @class = "form-control" })
- @Html.ValidationMessageFor(d => d.Weight)
-  </div>
 
-  <div class="mb-2">
-  @Html.LabelFor(d => d.Age, new { @class = "form-label" })
-  @Html.TextBoxFor(d => d.Age, new { @class = "form-control" })
-  @Html.ValidationMessageFor(d => d.Age)
-  </div>
- <div class="mb-2">
-  @Html.LabelFor(d => d.BreedId, new { @class = "form-label" })
-  @Html.DropDownListFor(d => d.BreedId, new SelectList(ViewBag.Breeds, "Id", "BreedName"), "--Select--", new { @class = "form-select" })
-  @Html.ValidationMessageFor(d => d.BreedId)
-   </div>
-  <div class="mt-2">
-<input type="submit" id="btnSubmit" class="btn btn-primary" value="Update" />
-  </div>  
-}
+                                                                <div class="mb-2" style="color:black">
+                                                                    @Html.LabelFor(d => d.Weight, new { @class = "form-label" })
+                                                                    @Html.TextBoxFor(d => d.Weight, new { @class = "form-control" })
+                                                                    @Html.ValidationMessageFor(d => d.Weight)
+                                                                </div>
+
+                                                                                <div class="mb-2" style="color:black">
+                                                                                    @Html.LabelFor(d => d.Age, new { @class = "form-label" })
+                                                                                    @Html.TextBoxFor(d => d.Age, new { @class = "form-control" })
+                                                                                    @Html.ValidationMessageFor(d => d.Age)
+                                                                                </div>
+                                                                                                <div class="mb-2" style="color:black">
+                                                                                                    @Html.LabelFor(d => d.BreedId, new { @class = "form-label" })
+                                                                                                    @Html.DropDownListFor(d => d.BreedId, new SelectList(ViewBag.Breeds, "Id", "BreedName"), "--Select--", new { @class = "form-select" })
+                                                                                                    @Html.ValidationMessageFor(d => d.BreedId)
+                                                                                                </div>
+                                                                                                                <div class="mt-2">
+                                                                                                                    <input type="submit" id="btnSubmit" class="btn btn-primary" value="Update" />
+
+
+                                                                                                                    <input type="submit" id="btnSubmit" class="btn btn-primary" value="Go Back" />
+                                                                                                                </div>}
